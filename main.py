@@ -3,11 +3,11 @@ import sys
 
 def main():
 	if len(sys.argv) < 2:
-		print("Usage: python main.py <file-path>")
+		print("Usage: python3 main.py <path_to_book>")
 		sys.exit(1)
 	text = get_book_text(sys.argv[1])
 	print("============ BOOKBOT ============")
-	print("Analyzing book found at {sys.argv[1]}")
+	print(f"Analyzing book found at {sys.argv[1]}")
 	print(word_count(text))
 	print("--------- Character Count -------")
 	print_sorted_list(sorting(char_count(text)))
